@@ -41,7 +41,7 @@ const MatchSchedule: React.FC = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/schedule');
+        const res = await axios.get('https://sports-api-woih.onrender.com/api/schedule');
         const data = res.data;
         setMatches(data.schedule || []);
       } catch (error) {
